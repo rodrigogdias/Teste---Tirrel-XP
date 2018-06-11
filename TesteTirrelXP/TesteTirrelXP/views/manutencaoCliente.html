@@ -1,0 +1,66 @@
+﻿<div>
+    <h3>Manutenção de clientes</h3>
+    <div id="detalhe" ng-hide="oCliente != undefined" ng-model="oCliente">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Empresa</th>
+                    <th>E-mail</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="c in Clientes">
+                    <td>{{c.NomeCliente}}</td>
+                    <td>{{c.NomeEmpresa}}</td>
+                    <td>{{c.Email}}</td>
+                    <td><input type="button" value="Editar" ng-click="GetCliente(c.IdCliente)" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="detalhe" ng-hide="oCliente == undefined" ng-model="oCliente">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" ng-model="oCliente.NomeCliente" />
+        </div>
+        <div>
+            <label for="nomeEmpresa">Nome da Empresa</label>
+            <input type="text" class="form-control" id="nomeEmpresa" ng-model="oCliente.NomeEmpresa" />
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" ng-model="oCliente.Email" />
+        </div>
+        <div>
+            <label for="cnpj">CNPJ</label>
+            <input type="text" class="form-control" id="cnpj" ng-model="oCliente.CNPJ" />
+        </div>
+        <div>
+            <label for="telefone">Telefone Comercial</label>
+            <input type="text" class="form-control" id="telefone" ng-model="oCliente.TelefoneComercial " />
+        </div>
+        <div>
+            <label for="celular">Celular</label>
+            <input type="text" class="form-control" id="celular" ng-model="oCliente.Celular" />
+        </div>
+        <div>
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control" id="cep" ng-model="oCliente.CEP" />
+        </div>
+        <div>
+            <label for="cidade">Cidade</label>
+            <input type="text" class="form-control" id="cidade" ng-model="oCliente.Cidade" />
+        </div>
+        <div>
+            <label for="estado">Estado</label>
+            <input type="text" class="form-control" id="estado" ng-model="oCliente.Estado" />
+        </div>
+        <a href="#!" ng-click="Update()">
+            <button id="btnSalvar" type="button" class="btn btn-primary btn-block">
+                Salvar
+            </button>
+        </a>
+    </div>
+</div>

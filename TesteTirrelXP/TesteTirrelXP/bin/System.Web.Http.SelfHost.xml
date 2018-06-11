@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.Http.SelfHost</name>
+  </assembly>
+  <members>
+    <member name="T:System.Net.Http.HttpRequestMessageExtensions">
+      <summary>Fornece métodos de extensão para <see cref="T:System.Net.Http.HttpRequestMessage" />.</summary>
+    </member>
+    <member name="M:System.Net.Http.HttpRequestMessageExtensions.GetSecurityMessageProperty(System.Net.Http.HttpRequestMessage)">
+      <summary>Obtém a <see cref="T:System.ServiceModel.Security.SecurityMessageProperty" /> atual armazenada nas propriedades da mensagem de solicitação em relação à solicitação em questão.</summary>
+      <returns>A <see cref="T:System.ServiceModel.Security.SecurityMessageProperty" /> atual.</returns>
+      <param name="request">A solicitação.</param>
+    </member>
+    <member name="T:System.Web.Http.SelfHost.HttpSelfHostConfiguration">
+      <summary>Contém a classe de configuração dos serviços HTTP.</summary>
+    </member>
+    <member name="M:System.Web.Http.SelfHost.HttpSelfHostConfiguration.#ctor(System.String)">
+      <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Http.SelfHost.HttpSelfHostConfiguration" />.</summary>
+      <param name="baseAddress">O endereço base em forma de cadeia de caracteres.</param>
+    </member>
+    <member name="M:System.Web.Http.SelfHost.HttpSelfHostConfiguration.#ctor(System.Uri)">
+      <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Http.SelfHost.HttpSelfHostConfiguration" />.</summary>
+      <param name="baseAddress">O endereço base em forma de um URI.</param>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.HttpSelfHostConfiguration.BaseAddress">
+      <summary>Obtém o endereço HTTP base.</summary>
+      <returns>O objeto <see cref="T:System.Uri" /> que representa o endereço HTTP base.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.HttpSelfHostConfiguration.ClientCredentialType">
+      <summary>Obtém ou define o tipo de credencial de cliente que o servidor espera.</summary>
+      <returns>Um valor de <see cref="T:System.ServiceModel.HttpClientCredentialType" /> que especifica o tipo de credencial.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.HttpSelfHostConfiguration.HostNameComparisonMode">
+      <summary>Obtém um valor que especifica como o nome de host deve ser usado em comparações de URI ao distribuir uma mensagem de entrada. </summary>
+      <returns>Um dos valores de enumeração de <see cref="T:System.ServiceModel.HostNameComparisonMode" />.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.HttpSelfHostConfiguration.MaxBufferSize">
+      <summary>Obtém ou define o tamanho máximo do buffer.</summary>
+      <returns>O tamanho máximo do buffer.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.HttpSelfHostConfiguration.MaxConcurrentRequests">
+      <summary>Obtém ou define o limite superior de instâncias simultâneas de <see cref="T:System.Net.Http.HttpRequestMessage" /> que podem ser processadas em qualquer momento determinado. O padrão é 100 vezes a quantidade de núcleos de CPU.</summary>
+      <returns>O limite superior de instâncias simultâneas de <see cref="T:System.Net.Http.HttpRequestMessage" /> que podem ser processadas em qualquer momento determinado.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.HttpSelfHostConfiguration.MaxReceivedMessageSize">
+      <summary>Obtém ou define o tamanho máximo da mensagem recebida.</summary>
+      <returns>O tamanho máximo da mensagem recebida.</returns>
+    </member>
+    <member name="M:System.Web.Http.SelfHost.HttpSelfHostConfiguration.OnConfigureBinding(System.Web.Http.SelfHost.Channels.HttpBinding)">
+      <summary>Chamado para aplicar a configuração no nível do ponto de extremidade.</summary>
+      <returns>A <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> a ser usada ao criar o <see cref="T:System.ServiceModel.Channels.IChannelListener" /> ou nulo se não houver parâmetros de associação presentes.</returns>
+      <param name="httpBinding">O ponto de extremidade do HTTP.</param>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.HttpSelfHostConfiguration.ReceiveTimeout">
+      <summary>Obtém ou define o tempo limite de recebimento.</summary>
+      <returns>O tempo limite de recebimento.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.HttpSelfHostConfiguration.SendTimeout">
+      <summary>Obtém ou define o tempo limite de envio.</summary>
+      <returns>O tempo limite de envio.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.HttpSelfHostConfiguration.TransferMode">
+      <summary>Obtém ou define o modo de transferência.</summary>
+      <returns>Um dos valores de enumeração da enumeração de <see cref="T:System.ServiceModel.TransferMode" />.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.HttpSelfHostConfiguration.UserNamePasswordValidator">
+      <summary>Obtém ou define o <see cref="T:System.IdentityModel.Selectors.UserNamePasswordValidator" /> que é usado para validar o nome de usuário e a senha enviados via HTTP ou HTTPS.</summary>
+      <returns>O <see cref="T:System.IdentityModel.Selectors.UserNamePasswordValidator" /> que é usado para validar o nome de usuário e a senha enviados via HTTP ou HTTPS.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.HttpSelfHostConfiguration.X509CertificateValidator">
+      <summary>Obtém ou define a instância <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> que será usada para validar o certificado de cliente enviado via HTTPS.</summary>
+      <returns>A instância <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> que será usada para validar o certificado de cliente.</returns>
+    </member>
+    <member name="T:System.Web.Http.SelfHost.HttpSelfHostServer">
+      <summary> A implementação de um <see cref="T:System.Web.Http.HttpServer" /> que escuta diretamente de HTTP. </summary>
+    </member>
+    <member name="M:System.Web.Http.SelfHost.HttpSelfHostServer.#ctor(System.Web.Http.SelfHost.HttpSelfHostConfiguration)">
+      <summary> Inicializa uma nova instância da classe <see cref="T:System.Web.Http.SelfHost.HttpSelfHostServer" />. </summary>
+      <param name="configuration">A configuração.</param>
+    </member>
+    <member name="M:System.Web.Http.SelfHost.HttpSelfHostServer.#ctor(System.Web.Http.SelfHost.HttpSelfHostConfiguration,System.Net.Http.HttpMessageHandler)">
+      <summary> Inicializa uma nova instância da classe <see cref="T:System.Web.Http.SelfHost.HttpSelfHostServer" />. </summary>
+      <param name="configuration">A configuração.</param>
+      <param name="dispatcher">O despachante.</param>
+    </member>
+    <member name="M:System.Web.Http.SelfHost.HttpSelfHostServer.CloseAsync">
+      <summary> Fecha a instância do <see cref="T:System.Web.Http.HttpServer" /> atual. </summary>
+      <returns>Uma <see cref="T:System.Threading.Tasks.Task" /> que representa a operação de fechamento assíncrona do <see cref="T:System.Web.Http.HttpServer" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.SelfHost.HttpSelfHostServer.OpenAsync">
+      <summary> Abre a instância do <see cref="T:System.Web.Http.HttpServer" /> atual. </summary>
+      <returns>Uma <see cref="T:System.Threading.Tasks.Task" /> que representa a operação de abertura assíncrona do <see cref="T:System.Web.Http.HttpServer" />. Quando esta tarefa estiver concluída com êxito, o servidor estará em execução.</returns>
+    </member>
+    <member name="T:System.Web.Http.SelfHost.Channels.HttpBinding">
+      <summary> Uma associação usada com pontos de extremidade para serviços da Web que usam solicitação HTTP fortemente tipada e mensagens de resposta. </summary>
+    </member>
+    <member name="M:System.Web.Http.SelfHost.Channels.HttpBinding.#ctor">
+      <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Http.SelfHost.Channels.HttpBinding" />.</summary>
+    </member>
+    <member name="M:System.Web.Http.SelfHost.Channels.HttpBinding.#ctor(System.Web.Http.SelfHost.Channels.HttpBindingSecurityMode)">
+      <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Http.SelfHost.Channels.HttpBinding" /> com um modo de segurança especificado.</summary>
+      <param name="securityMode">Um valor de <see cref="T:System.Web.Http.SelfHost.Channels.HttpBindingSecurityMode" /> que especifica o tipo de segurança usado para configurar um ponto de extremidade de serviço usando a associação de <see cref="T:System.Web.Http.SelfHost.Channels.HttpBinding" />.</param>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBinding.ConfigureTransportBindingElement">
+      <summary> Obtém ou define o delegado que configura a <see cref="T:System.ServiceModel.Channels.HttpTransportBindingElement" /> que esta associação cria. </summary>
+      <returns>Um delegado para configurar o <see cref="T:System.ServiceModel.Channels.HttpTransportBindingElement" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.SelfHost.Channels.HttpBinding.CreateBindingElements">
+      <summary>Cria uma coleção que contém os elementos de associação que fazem parte da associação atual.</summary>
+      <returns>Uma coleção que contém os elementos de associação do objeto de associação atual na ordem correta.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBinding.EnvelopeVersion">
+      <summary>Obtém a versão do SOAP usada para mensagens que são processadas por essa associação. </summary>
+      <returns>O valor da <see cref="T:System.ServiceModel.EnvelopeVersion" /> que é usado com essa associação. O valor é sempre <see cref="F:System.ServiceModel.EnvelopeVersion.None" />.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBinding.HostNameComparisonMode">
+      <summary>Obtém ou define um valor que indica se o nome de host é usado para acessar o serviço ao combinar a URI.</summary>
+      <returns>O valor <see cref="T:System.ServiceModel.HostnameComparisonMode" />. </returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBinding.MaxBufferPoolSize">
+      <summary>Obtém ou define a quantidade máxima de memória alocada para o gerenciador de buffer que gerencia os buffers exigidos pelos pontos de extremidade que utilizam esta associação.</summary>
+      <returns>O tamanho máximo, em bytes, do pool de armazenamentos em buffer usados por um ponto de extremidade configurado com essa associação.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBinding.MaxBufferSize">
+      <summary>Obtém ou define a quantidade máxima de memória alocada para uso pelo gerenciador dos buffers de mensagens que recebem mensagens do canal.</summary>
+      <returns>O tamanho máximo do buffer.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBinding.MaxReceivedMessageSize">
+      <summary>Obtém ou define o tamanho máximo para uma mensagem que pode ser processado por meio da associação.</summary>
+      <returns>O tamanho máximo, em bytes, de uma mensagem que é processada por meio de associação.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBinding.Scheme">
+      <summary>Obtém o esquema de transporte URI para os canais e os ouvintes que estão configurados com essa associação.</summary>
+      <returns>O esquema de transporte.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBinding.Security">
+      <summary>Obtém ou define as configurações de segurança usadas ​​com essa associação.</summary>
+      <returns>As configurações de segurança.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBinding.System#ServiceModel#Channels#IBindingRuntimePreferences#ReceiveSynchronously">
+      <summary>Obtém um valor que indica se as solicitações de entrada são tratadas de modo síncrono ou assíncrono.</summary>
+      <returns>verdadeiro se as solicitações forem tratadas de forma síncrona; falso se tratadas de forma assíncrona.</returns>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBinding.TransferMode">
+      <summary>Obtém ou define um valor que indica se as mensagens são enviadas armazenadas em buffer ou transmitidas.</summary>
+      <returns>O valor <see cref="T:System.ServiceModel.TransferMode" /> que indica se as mensagens são enviadas armazenadas em buffer ou transmitidas.</returns>
+    </member>
+    <member name="T:System.Web.Http.SelfHost.Channels.HttpBindingSecurity">
+      <summary> Especifica os tipos de segurança disponíveis para um ponto de extremidade de serviço configurado para usar uma associação <see cref="T:System.Web.Http.SelfHost.Channels.HttpBinding" />. </summary>
+    </member>
+    <member name="M:System.Web.Http.SelfHost.Channels.HttpBindingSecurity.#ctor">
+      <summary> Cria uma nova instância da classe <see cref="T:System.Web.Http.SelfHost.Channels.HttpBindingSecurity" />. </summary>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBindingSecurity.Mode">
+      <summary> Obtém ou define o modo de segurança usado por um ponto de extremidade configurado para usar uma associação <see cref="T:System.Web.Http.SelfHost.Channels.HttpBinding" />. </summary>
+    </member>
+    <member name="P:System.Web.Http.SelfHost.Channels.HttpBindingSecurity.Transport">
+      <summary> Obtém ou define um objeto que contém as configurações de segurança de nível de transporte da associação <see cref="T:System.Web.Http.SelfHost.Channels.HttpBinding" />. </summary>
+    </member>
+    <member name="T:System.Web.Http.SelfHost.Channels.HttpBindingSecurityMode">
+      <summary> Define os modos de segurança que podem ser usados para configurar um ponto de extremidade de serviço que usa a <see cref="T:System.Web.Http.SelfHost.Channels.HttpBinding" />. </summary>
+    </member>
+    <member name="F:System.Web.Http.SelfHost.Channels.HttpBindingSecurityMode.None">
+      <summary> Indica que nenhuma segurança é utilizada com solicitações HTTP. </summary>
+    </member>
+    <member name="F:System.Web.Http.SelfHost.Channels.HttpBindingSecurityMode.Transport">
+      <summary> Indica que nenhuma segurança de nível de transporte é utilizada com solicitações HTTP. </summary>
+    </member>
+    <member name="F:System.Web.Http.SelfHost.Channels.HttpBindingSecurityMode.TransportCredentialOnly">
+      <summary> Indica que só é fornecida a autenticação de cliente com base em HTTP. </summary>
+    </member>
+  </members>
+</doc>

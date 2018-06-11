@@ -1,0 +1,9 @@
+C:\Users\Digão\Desktop\Teste Tirrel XP\TesteTirrelXP\TesteTirrelXPBL\bin\Debug\TesteTirrelXPBL.dll
+C:\Users\Digão\Desktop\Teste Tirrel XP\TesteTirrelXP\TesteTirrelXPBL\bin\Debug\TesteTirrelXPBL.pdb
+C:\Users\Digão\Desktop\Teste Tirrel XP\TesteTirrelXP\TesteTirrelXPBL\bin\Debug\EntityFramework.dll
+C:\Users\Digão\Desktop\Teste Tirrel XP\TesteTirrelXP\TesteTirrelXPBL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Digão\Desktop\Teste Tirrel XP\TesteTirrelXP\TesteTirrelXPBL\bin\Debug\EntityFramework.xml
+C:\Users\Digão\Desktop\Teste Tirrel XP\TesteTirrelXP\TesteTirrelXPBL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Digão\Desktop\Teste Tirrel XP\TesteTirrelXP\TesteTirrelXPBL\obj\Debug\TesteTirrelXPBL.dll
+C:\Users\Digão\Desktop\Teste Tirrel XP\TesteTirrelXP\TesteTirrelXPBL\obj\Debug\TesteTirrelXPBL.pdb
+C:\Users\Digão\Desktop\Teste Tirrel XP\TesteTirrelXP\TesteTirrelXPBL\obj\Debug\TesteTirrelXPBL.csprojResolveAssemblyReference.cache
